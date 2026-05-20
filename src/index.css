@@ -36,3 +36,10 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+@media (max-width: 480px) {
+  .home-page { padding: 40px 16px; }
+  .home-title { font-size: 28px; }
+  .test-page { padding: 24px 16px; }
+  .result-page { padding: 24px 16px; }
+}
