@@ -1,0 +1,11 @@
+.confidence-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.conf-high { background: rgba(39, 174, 96, 0.12); color: var(--color-success); }
+.conf-medium { background: rgba(243, 156, 18, 0.12); color: var(--color-warning); }
+.conf-low { background: rgba(231, 76, 60, 0.12); color: var(--color-error); }
