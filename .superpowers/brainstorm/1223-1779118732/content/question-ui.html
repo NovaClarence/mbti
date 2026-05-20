@@ -1,0 +1,130 @@
+<style>
+  .mockup-pair {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .mockup-pair .mockup {
+    flex: 1;
+  }
+  .mockup-body {
+    padding: 16px;
+  }
+  .q-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: #999;
+  }
+  .q-progress {
+    background: #eee;
+    border-radius: 6px;
+    height: 6px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .q-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 6px;
+  }
+  .q-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .q-option {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .q-option:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+  }
+  .q-option.selected {
+    border-color: #667eea;
+    background: #667eea10;
+  }
+  .q-option .radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  .q-option.selected .radio {
+    border-color: #667eea;
+    background: #667eea;
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+  .q-option .opt-text {
+    font-size: 15px;
+    color: #444;
+  }
+  .q-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+  }
+</style>
+
+<h2>Question Page — Two Layout Options</h2>
+<p class="subtitle">一题一页，Likert 5级量表。你更喜欢哪种布局？</p>
+
+<div class="mockup-pair">
+  <div class="mockup">
+    <div class="mockup-header">Option A: Centered Card (聚焦式)</div>
+    <div class="mockup-body" style="max-width: 480px; margin: 0 auto;">
+      <div class="q-header">
+        <span>第 15 / 80 题</span>
+        <span>🧠 标准版</span>
+      </div>
+      <div class="q-progress"><div class="q-progress-fill" style="width:19%"></div></div>
+      <div class="q-text">在社交场合中，你通常会感到精力充沛而不是疲惫</div>
+      <div class="q-option selected"><div class="radio"></div><span class="opt-text">非常不同意</span></div>
+      <div class="q-option"><div class="radio"></div><span class="opt-text">不同意</span></div>
+      <div class="q-option"><div class="radio"></div><span class="opt-text">中立</span></div>
+      <div class="q-option"><div class="radio"></div><span class="opt-text">同意</span></div>
+      <div class="q-option"><div class="radio"></div><span class="opt-text">非常同意</span></div>
+      <div style="text-align: right;"><button class="q-btn">下一题 →</button></div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">Option B: Full Width (展开式)</div>
+    <div class="mockup-body">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+        <div class="q-header" style="margin:0;"><span>第 15 / 80 题</span></div>
+        <div class="q-header" style="margin:0;"><span>🧠 标准版 | 剩余约25分钟</span></div>
+      </div>
+      <div class="q-progress"><div class="q-progress-fill" style="width:19%"></div></div>
+      <div class="q-text">在社交场合中，你通常会感到精力充沛而不是疲惫</div>
+      <div style="display:flex;gap:8px;margin-bottom:20px;">
+        <div style="flex:1;text-align:center;padding:10px;border:2px solid #e0e0e0;border-radius:8px;font-size:12px;">😠<br>非常不同意</div>
+        <div style="flex:1;text-align:center;padding:10px;border:2px solid #e0e0e0;border-radius:8px;font-size:12px;">😐<br>不同意</div>
+        <div style="flex:1;text-align:center;padding:10px;border:2px solid #667eea;border-radius:8px;font-size:12px;background:#f8f9ff;">🤔<br>中立</div>
+        <div style="flex:1;text-align:center;padding:10px;border:2px solid #e0e0e0;border-radius:8px;font-size:12px;">😊<br>同意</div>
+        <div style="flex:1;text-align:center;padding:10px;border:2px solid #e0e0e0;border-radius:8px;font-size:12px;">🤩<br>非常同意</div>
+      </div>
+      <div style="text-align: right;"><button class="q-btn">下一题 →</button></div>
+    </div>
+  </div>
+</div>

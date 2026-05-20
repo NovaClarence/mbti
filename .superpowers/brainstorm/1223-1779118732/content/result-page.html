@@ -1,0 +1,180 @@
+<style>
+  .result-container {
+    font-family: system-ui, sans-serif;
+  }
+  .type-hero {
+    text-align: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #667eea11, #764ba211);
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+  .type-badge {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #667eea;
+    padding: 12px 32px;
+    border: 3px solid #667eea;
+    border-radius: 16px;
+  }
+  .type-name {
+    font-size: 18px;
+    color: #666;
+    margin-top: 8px;
+  }
+  .confidence-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .confidence-tag.high { background: #2ecc7120; color: #27ae60; }
+  .confidence-tag.medium { background: #f39c1220; color: #e67e22; }
+  .confidence-tag.low { background: #e74c3c20; color: #c0392b; }
+
+  .dim-bars {
+    margin-bottom: 20px;
+  }
+  .dim-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .dim-label {
+    width: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1a1a2e;
+    text-align: center;
+  }
+  .dim-bar-wrap {
+    flex: 1;
+    display: flex;
+    height: 28px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .dim-bar-left {
+    background: #e0e0e0;
+    transition: width 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 6px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .dim-bar-right {
+    background: #667eea;
+    transition: width 0.5s;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+  }
+  .dim-right-label {
+    width: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #764ba2;
+    text-align: center;
+  }
+
+  .radar-placeholder {
+    text-align: center;
+    padding: 32px;
+    background: #f8f9ff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #888;
+  }
+
+  .action-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+  .btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary { background: #667eea; color: white; }
+  .btn-outline { background: white; color: #667eea; border: 2px solid #667eea; }
+</style>
+
+<div class="result-container">
+  <h2>Result Page — Layout</h2>
+  <p class="subtitle">测试完成后的完整报告页。自上而下阅读。</p>
+
+  <div style="max-width: 520px; margin: 20px auto;">
+
+    <div class="type-hero">
+      <div class="type-badge">INTJ</div>
+      <div class="type-name">建筑师 — The Architect</div>
+      <div class="confidence-tag high">✓ 结果置信度：高</div>
+    </div>
+
+    <h3>四维度分布</h3>
+    <div class="dim-bars">
+      <div class="dim-row">
+        <div class="dim-label">E</div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar-left" style="width:40%"></div>
+          <div class="dim-bar-right" style="width:60%">I 60%</div>
+        </div>
+        <div class="dim-right-label">I</div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-label">S</div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar-left" style="width:15%"></div>
+          <div class="dim-bar-right" style="width:85%">N 85%</div>
+        </div>
+        <div class="dim-right-label">N</div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-label">T</div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar-left" style="width:35%"></div>
+          <div class="dim-bar-right" style="width:65%">T 65%</div>
+        </div>
+        <div class="dim-right-label">F</div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-label">J</div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar-left" style="width:55%"></div>
+          <div class="dim-bar-right" style="width:45%">J 45%</div>
+        </div>
+        <div class="dim-right-label">P</div>
+      </div>
+    </div>
+
+    <h3>八维认知功能</h3>
+    <div class="radar-placeholder">
+      <div style="color:#1a1a2e;font-size:16px;font-weight:600;margin-bottom:6px;">Radar Chart</div>
+      八维功能栈雷达图展示<br>
+      Ni → Te → Fi → Se → Ne → Ti → Fe → Si<br>
+      <span style="color:#667eea;">主功能: Ni (内倾直觉)</span> ·
+      <span style="color:#764ba2;">辅助: Te (外倾思维)</span>
+    </div>
+
+    <div class="action-btns">
+      <button class="btn btn-primary">保存结果</button>
+      <button class="btn btn-outline">重新测试</button>
+      <button class="btn btn-outline">分享</button>
+    </div>
+  </div>
+</div>

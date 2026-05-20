@@ -1,0 +1,160 @@
+<style>
+  .cards-row { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  .mbti-card {
+    width: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    font-family: system-ui, sans-serif;
+    background: #1a1a2e;
+    color: white;
+  }
+  .card-img {
+    height: 220px;
+    background: linear-gradient(135deg, #2d1b69, #667eea, #1a1a2e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-img .ai-label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+  }
+  .card-img .char-placeholder {
+    text-align: center;
+    opacity: 0.85;
+  }
+  .card-img .char-placeholder .emoji { font-size: 64px; }
+  .card-img .char-placeholder .role { font-size: 14px; color: #ccc; margin-top: 4px; }
+  .card-body {
+    padding: 16px 20px;
+  }
+  .card-body .type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .card-body .type-badge {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #a78bfa;
+  }
+  .card-body .type-name {
+    font-size: 13px;
+    color: #999;
+  }
+  .card-body .traits {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .card-body .trait {
+    background: #667eea30;
+    color: #a78bfa;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  .card-body .dim-summary {
+    display: flex;
+    gap: 0;
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+  .card-body .dim-summary span {
+    margin-right: 8px;
+    font-weight: 600;
+    color: #ccc;
+  }
+  .card-footer {
+    border-top: 1px solid #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-footer .site {
+    font-size: 11px;
+    color: #666;
+  }
+  .card-footer .share-hint {
+    font-size: 11px;
+    color: #667eea;
+  }
+</style>
+
+<h2>Share Card — MBTI Character Card</h2>
+<p class="subtitle">测试结果自动生成角色名片，可保存图片分享</p>
+
+<div class="cards-row">
+  <!-- INTJ Card -->
+  <div class="mbti-card">
+    <div class="card-img">
+      <div class="char-placeholder">
+        <div class="emoji">🧊</div>
+        <div class="role">清冷腹黑高冷少年</div>
+      </div>
+      <div class="ai-label">AI Generated</div>
+    </div>
+    <div class="card-body">
+      <div class="type-row">
+        <span class="type-badge">INTJ</span>
+        <span class="type-name">建筑师 · The Architect</span>
+      </div>
+      <div class="traits">
+        <span class="trait">理智冷静</span>
+        <span class="trait">独立自主</span>
+        <span class="trait">长远规划</span>
+      </div>
+      <div class="dim-summary">
+        <span>I 60%</span><span>N 85%</span><span>T 65%</span><span>J 45%</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="site">MBTI 精准测试</span>
+      <span class="share-hint">扫码再测 →</span>
+    </div>
+  </div>
+
+  <!-- ENFP Card -->
+  <div class="mbti-card">
+    <div class="card-img">
+      <div class="char-placeholder">
+        <div class="emoji">🌈</div>
+        <div class="role">元气活泼甜系少女</div>
+      </div>
+      <div class="ai-label">AI Generated</div>
+    </div>
+    <div class="card-body">
+      <div class="type-row">
+        <span class="type-badge">ENFP</span>
+        <span class="type-name">快乐小狗 · The Campaigner</span>
+      </div>
+      <div class="traits">
+        <span class="trait">热情洋溢</span>
+        <span class="trait">创意无限</span>
+        <span class="trait">自由奔放</span>
+      </div>
+      <div class="dim-summary">
+        <span>E 70%</span><span>N 80%</span><span>F 65%</span><span>P 75%</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="site">MBTI 精准测试</span>
+      <span class="share-hint">扫码再测 →</span>
+    </div>
+  </div>
+</div>

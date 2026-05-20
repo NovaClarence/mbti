@@ -1,0 +1,139 @@
+<style>
+  .arch-container {
+    font-family: system-ui, sans-serif;
+  }
+  .arch-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .arch-header h2 {
+    color: #1a1a2e;
+    margin-bottom: 6px;
+  }
+  .arch-flow {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .flow-step {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-align: center;
+    min-width: 100px;
+    font-weight: 600;
+    position: relative;
+  }
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #667eea;
+    font-weight: bold;
+  }
+  .components-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .comp-card {
+    background: #f8f9ff;
+    border-left: 4px solid #667eea;
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .comp-card h4 {
+    margin: 0 0 8px 0;
+    color: #1a1a2e;
+  }
+  .comp-card p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+  }
+  .comp-card.engine {
+    border-left-color: #e74c3c;
+    background: #fff5f5;
+  }
+  .comp-card.store {
+    border-left-color: #2ecc71;
+    background: #f5fff8;
+  }
+  .comp-card.report {
+    border-left-color: #f39c12;
+    background: #fffdf5;
+  }
+  .section-title {
+    color: #666;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="arch-container">
+  <div class="arch-header">
+    <h2>MBTI Test — Architecture Overview</h2>
+    <p class="subtitle">React + TypeScript + Vite · Pure Frontend SPA · Unified Scoring Engine</p>
+  </div>
+
+  <div class="section-title">User Flow</div>
+  <div class="arch-flow">
+    <div class="flow-step">Home<br><small>版本选择</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Test<br><small>每题一页</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Results<br><small>四维报告</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Deep Dive<br><small>八维分析</small></div>
+  </div>
+
+  <div class="section-title">Component Architecture</div>
+  <div class="components-grid">
+    <div class="comp-card">
+      <h4>App (Router)</h4>
+      <p>React Router 管理三个阶段：首页 → 测试 → 结果。URL 驱动，支持前进后退</p>
+    </div>
+    <div class="comp-card engine">
+      <h4>Scoring Engine (纯函数)</h4>
+      <p>接收所有答案，输出 { type: "INTJ", dimensions: {...}, functions: {...}, reliability: {...} }</p>
+    </div>
+    <div class="comp-card">
+      <h4>Question Engine</h4>
+      <p>管理题库、版本筛选、出题顺序、防伪题插入。与评分引擎共享同一份题目元数据</p>
+    </div>
+    <div class="comp-card report">
+      <h4>Report Generator</h4>
+      <p>评分结果 → 可视化报告。类型描述、维度分布图、八维雷达图</p>
+    </div>
+    <div class="comp-card store">
+      <h4>Test State (Zustand)</h4>
+      <p>当前进度、已回答题目、已用时间。localStorage 持久化防刷新丢失</p>
+    </div>
+    <div class="comp-card">
+      <h4>UI Components</h4>
+      <p>ProgressBar、QuestionCard、OptionButton、TypeBadge、RadarChart、BarChart、ShareButton</p>
+    </div>
+  </div>
+
+  <div class="section-title">Data Flow</div>
+  <div class="arch-flow" style="flex-wrap: wrap; font-size: 13px;">
+    <code style="background:#eee;padding:4px 8px;border-radius:4px;">题库 JSON</code>
+    <div class="flow-arrow">→</div>
+    <code style="background:#eee;padding:4px 8px;border-radius:4px;">Question Engine 筛选</code>
+    <div class="flow-arrow">→</div>
+    <code style="background:#eee;padding:4px 8px;border-radius:4px;">用户答案[]</code>
+    <div class="flow-arrow">→</div>
+    <code style="background:#eee;padding:4px 8px;border-radius:4px;">Scoring Engine</code>
+    <div class="flow-arrow">→</div>
+    <code style="background:#eee;padding:4px 8px;border-radius:4px;">结果对象</code>
+    <div class="flow-arrow">→</div>
+    <code style="background:#eee;padding:4px 8px;border-radius:4px;">Report Generator</code>
+  </div>
+</div>
