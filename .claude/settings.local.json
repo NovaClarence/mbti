@@ -4,7 +4,36 @@
       "Skill(superpowers:brainstorming)",
       "Skill(superpowers:brainstorming:*)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Skill(superpowers:using-git-worktrees)",
+      "Skill(superpowers:using-git-worktrees:*)",
+      "Bash(ls -d .worktrees)",
+      "Bash(ls -d worktrees)",
+      "Bash(grep -i \"worktree\" CLAUDE.md)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git worktree *)",
+      "Read(//c/Users/29960/.claude/plugins/cache/superpowers-dev/superpowers/5.0.7/skills/subagent-driven-development/**)",
+      "Bash(npm --version)",
+      "Bash(yes)",
+      "Bash(npm create *)",
+      "Bash(npx create-vite@latest . --template react-ts)",
+      "Bash(mkdir -p \"c:/Users/29960/Desktop/MBTI/.worktrees/mbti-dev/public\" \"c:/Users/29960/Desktop/MBTI/.worktrees/mbti-dev/src/assets\")",
+      "Bash(npm install *)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(node -e \"const pkg = require\\('./package.json'\\); const deps = {...pkg.dependencies, ...pkg.devDependencies}; const missing = []; for \\(const [name, ver] of Object.entries\\(deps\\)\\) { try { require.resolve\\(name, {paths: [process.cwd\\(\\)]}\\) } catch\\(e\\) { missing.push\\(name\\) } }; if \\(missing.length\\) console.log\\('MISSING:', missing.join\\(', '\\)\\); else console.log\\('All deps resolved'\\)\")",
+      "Bash(npx tsc *)",
+      "Bash(git status *)",
+      "Bash(npm run *)",
+      "Bash(npx vite *)",
+      "Bash(curl -s http://localhost:4173)",
+      "Bash(kill %1)",
+      "Bash(node -e \"const q=require\\('./src/data/questions.json'\\); console.log\\('Total questions:', q.length\\); console.log\\('Weights:', [...new Set\\(q.map\\(x=>x.weight\\)\\)]\\); console.log\\('Sample:', JSON.stringify\\(q[0], null, 2\\)\\); console.log\\('Attention checks:', q.filter\\(x=>x.attentionCheck\\).length\\); console.log\\('Duplicates:', q.filter\\(x=>x.duplicateOf\\).length\\);\")",
+      "Bash(git branch *)",
+      "Bash(npx tsx -e ' *)",
+      "Bash(node -e \"const q=require\\('./src/data/questions.json'\\); const c=q.filter\\(x=>x.weight==='core'\\).length; const e=q.filter\\(x=>x.weight==='extended'\\).length; const d=q.filter\\(x=>x.weight==='deep'\\).length; console.log\\('core:',c,'extended:',e,'deep:',d,'total:',q.length\\); console.log\\('Quick:',c\\); console.log\\('Standard:',c+e\\); console.log\\('Deep:',q.length\\);\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\29960\\Desktop\\MBTI\\.worktrees\\mbti-dev"
     ]
   }
 }

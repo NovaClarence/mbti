@@ -1,32 +1,40 @@
 .test-page {
-  max-width: 480px;
+  max-width: 520px;
   width: 100%;
-  padding: 40px 20px;
+  padding: 48px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.4s var(--ease) both;
 }
 
 .next-btn {
-  margin-top: 24px;
-  padding: 14px 40px;
-  background: var(--color-primary);
+  margin-top: 28px;
+  padding: 16px 48px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: white;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: var(--radius);
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s var(--ease);
   font-family: inherit;
+  box-shadow: 0 4px 16px rgba(108, 92, 231, 0.3);
+  letter-spacing: 0.3px;
 }
 
 .next-btn:hover:not(:disabled) {
-  background: var(--color-primary-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(108, 92, 231, 0.4);
+}
+
+.next-btn:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .next-btn:disabled {
-  opacity: 0.4;
+  opacity: 0.35;
   cursor: not-allowed;
+  box-shadow: none;
 }

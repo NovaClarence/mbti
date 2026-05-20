@@ -1,26 +1,30 @@
 .radar-chart-container {
-  background: var(--color-card);
-  border-radius: var(--radius);
-  padding: 24px;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: 28px;
   box-shadow: var(--shadow);
+  border: 1px solid var(--color-border);
 }
 
 .radar-title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   text-align: center;
+  color: var(--color-text);
+  letter-spacing: -0.2px;
 }
 
 .radar-legend {
   display: flex;
   justify-content: center;
-  gap: 24px;
-  margin-top: 12px;
+  gap: 28px;
+  margin-top: 16px;
   font-size: 13px;
   color: var(--color-text-secondary);
 }
 
 .radar-legend strong {
   color: var(--color-primary);
+  font-weight: 700;
 }

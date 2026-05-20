@@ -1,25 +1,49 @@
 .home-page {
-  max-width: 600px;
+  max-width: 640px;
   width: 100%;
-  padding: 60px 20px;
+  padding: 72px 24px 80px;
 }
 
 .home-hero {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
+  animation: fadeInUp 0.6s var(--ease) both;
+}
+
+.home-icon {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  border-radius: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 28px rgba(108, 92, 231, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-title {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 800;
   color: var(--color-text);
   margin-bottom: 12px;
-  letter-spacing: 2px;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .home-subtitle {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .version-cards {
@@ -32,60 +56,118 @@
   display: block;
   width: 100%;
   text-align: left;
-  padding: 24px;
-  background: var(--color-card);
+  padding: 28px 28px;
+  background: var(--color-bg-card);
   border: 2px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.35s var(--ease);
   font-family: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.version-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.03), rgba(225, 112, 85, 0.02));
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
 }
 
 .version-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
+  border-color: var(--color-border-active);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
 }
+
+.version-card:hover::before {
+  opacity: 1;
+}
+
+.version-card:nth-child(1) { animation: slideUp 0.5s var(--ease) 0.1s both; }
+.version-card:nth-child(2) { animation: slideUp 0.5s var(--ease) 0.2s both; }
+.version-card:nth-child(3) { animation: slideUp 0.5s var(--ease) 0.3s both; }
 
 .version-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .version-label {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--color-text);
+  letter-spacing: -0.3px;
 }
 
-.version-count {
-  font-size: 14px;
+.version-badge {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.version-badge.quick {
+  background: rgba(0, 184, 148, 0.1);
+  color: var(--color-success);
+}
+
+.version-badge.standard {
+  background: rgba(108, 92, 231, 0.1);
   color: var(--color-primary);
-  font-weight: 600;
+}
+
+.version-badge.deep {
+  background: rgba(225, 112, 85, 0.1);
+  color: var(--color-accent);
 }
 
 .version-desc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-text-secondary);
-  margin-bottom: 16px;
-  line-height: 1.5;
+  margin-bottom: 18px;
+  line-height: 1.6;
+  position: relative;
 }
 
 .version-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .version-time {
   font-size: 13px;
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.version-time-icon {
+  font-size: 16px;
 }
 
 .version-start {
   font-size: 14px;
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s var(--ease);
+}
+
+.version-card:hover .version-start {
+  gap: 8px;
 }

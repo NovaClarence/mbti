@@ -1,64 +1,82 @@
 .question-card {
-  background: var(--color-card);
-  border-radius: var(--radius);
-  padding: 32px;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: 36px;
   box-shadow: var(--shadow);
-  max-width: 480px;
+  max-width: 520px;
   width: 100%;
+  animation: scaleIn 0.35s var(--ease) both;
+  border: 1px solid var(--color-border);
 }
 
 .question-text {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   color: var(--color-text);
-  line-height: 1.6;
-  margin-bottom: 28px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  letter-spacing: -0.2px;
 }
 
 .question-options {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .option-btn {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   width: 100%;
-  padding: 14px 16px;
-  background: transparent;
+  padding: 16px 20px;
+  background: var(--color-bg);
   border: 2px solid var(--color-border);
-  border-radius: 10px;
+  border-radius: var(--radius);
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.25s var(--ease);
   font-family: inherit;
-  font-size: 15px;
-  color: var(--color-text);
+  font-size: 16px;
+  color: var(--color-text-secondary);
   text-align: left;
+  position: relative;
 }
 
 .option-btn:hover {
-  border-color: var(--color-primary);
-  background: rgba(102, 126, 234, 0.05);
+  border-color: var(--color-primary-light);
+  background: rgba(108, 92, 231, 0.04);
+  color: var(--color-text);
+  transform: translateX(4px);
 }
 
 .option-btn.selected {
   border-color: var(--color-primary);
-  background: rgba(102, 126, 234, 0.08);
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.08), rgba(162, 155, 254, 0.06));
+  color: var(--color-text);
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(108, 92, 231, 0.12);
 }
 
 .option-radio {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   border: 2px solid var(--color-border);
   flex-shrink: 0;
-  transition: all 0.15s;
+  transition: all 0.3s var(--ease);
+  position: relative;
+}
+
+.option-btn:hover .option-radio {
+  border-color: var(--color-primary-light);
 }
 
 .option-btn.selected .option-radio {
   border-color: var(--color-primary);
   background: var(--color-primary);
-  box-shadow: inset 0 0 0 4px var(--color-card);
+  box-shadow: 0 0 0 4px var(--color-bg-card), inset 0 0 0 5px var(--color-bg-card);
+}
+
+.option-label {
+  flex: 1;
 }
