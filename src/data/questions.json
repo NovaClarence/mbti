@@ -136,5 +136,14 @@
   {"id": "q_fn_si_06", "text": "你能回忆起童年时期许多生动的片段和当时的感受", "dimension": "S/N", "function": "Si", "weight": "extended", "reversed": false},
   {"id": "q_fn_se_06", "text": "你在需要快速反应的环境中表现得尤为出色", "dimension": "J/P", "function": "Se", "weight": "extended", "reversed": false},
   {"id": "q_fn_ni_06", "text": "你经常发现自己在思考'事物的本质是什么'", "dimension": "S/N", "function": "Ni", "weight": "deep", "reversed": true},
-  {"id": "q_fn_ne_06", "text": "别人经常说你想法跳脱、话题转换太快", "dimension": "J/P", "function": "Ne", "weight": "deep", "reversed": true}
+  {"id": "q_fn_ne_06", "text": "别人经常说你想法跳脱、话题转换太快", "dimension": "J/P", "function": "Ne", "weight": "deep", "reversed": true},
+
+  {"id": "q_ac_04", "text": "这是一道检测题，请选择「中立」", "dimension": "S/N", "function": null, "weight": "extended", "reversed": false, "attentionCheck": {"requiredAnswer": 3}},
+  {"id": "q_ac_05", "text": "请在这道题中选择「同意」以确认你在认真作答", "dimension": "J/P", "function": null, "weight": "deep", "reversed": false, "attentionCheck": {"requiredAnswer": 4}},
+  {"id": "q_ac_06", "text": "检测题：请选择「非常不同意」继续", "dimension": "T/F", "function": null, "weight": "deep", "reversed": false, "attentionCheck": {"requiredAnswer": 1}},
+
+  {"id": "q_dup_jp_01", "text": "出发前你习惯提前做好详细攻略和预订", "dimension": "J/P", "function": "Te", "weight": "extended", "reversed": false},
+  {"id": "q_dup_jp_02", "text": "旅行时住宿和交通你都提前安排好才安心", "dimension": "J/P", "function": "Si", "weight": "extended", "reversed": false, "duplicateOf": "q_dup_jp_01"},
+  {"id": "q_dup_fn_01", "text": "你经常能在头脑中看到清晰的未来画面", "dimension": "S/N", "function": "Ni", "weight": "deep", "reversed": true},
+  {"id": "q_dup_fn_02", "text": "你对自己的长远未来有一个清晰的内在愿景", "dimension": "S/N", "function": "Ni", "weight": "deep", "reversed": true, "duplicateOf": "q_dup_fn_01"}
 ]

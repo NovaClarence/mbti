@@ -98,6 +98,92 @@
   margin: 0;
 }
 
+/* ── Resume Section ── */
+.resume-section {
+  margin-bottom: 16px;
+  animation: fadeInUp 0.4s var(--ease) 0.2s both;
+}
+
+.resume-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.06), rgba(0, 184, 148, 0.04));
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-card::after {
+  content: '';
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+.resume-card:hover {
+  box-shadow: 0 4px 20px rgba(108, 92, 231, 0.2);
+  transform: translateY(-2px);
+}
+
+.resume-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.resume-label {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.resume-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 14px;
+  background: rgba(108, 92, 231, 0.12);
+  color: var(--color-primary);
+}
+
+.resume-desc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+}
+
+.resume-progress-track {
+  width: 100%;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.resume-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  border-radius: 3px;
+  transition: width 0.5s var(--ease);
+}
+
 /* ── Version Selection ── */
 .version-section-label {
   font-size: 13px;

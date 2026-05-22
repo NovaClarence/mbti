@@ -30,7 +30,8 @@
       "Bash(node -e \"const q=require\\('./src/data/questions.json'\\); console.log\\('Total questions:', q.length\\); console.log\\('Weights:', [...new Set\\(q.map\\(x=>x.weight\\)\\)]\\); console.log\\('Sample:', JSON.stringify\\(q[0], null, 2\\)\\); console.log\\('Attention checks:', q.filter\\(x=>x.attentionCheck\\).length\\); console.log\\('Duplicates:', q.filter\\(x=>x.duplicateOf\\).length\\);\")",
       "Bash(git branch *)",
       "Bash(npx tsx -e ' *)",
-      "Bash(node -e \"const q=require\\('./src/data/questions.json'\\); const c=q.filter\\(x=>x.weight==='core'\\).length; const e=q.filter\\(x=>x.weight==='extended'\\).length; const d=q.filter\\(x=>x.weight==='deep'\\).length; console.log\\('core:',c,'extended:',e,'deep:',d,'total:',q.length\\); console.log\\('Quick:',c\\); console.log\\('Standard:',c+e\\); console.log\\('Deep:',q.length\\);\")"
+      "Bash(node -e \"const q=require\\('./src/data/questions.json'\\); const c=q.filter\\(x=>x.weight==='core'\\).length; const e=q.filter\\(x=>x.weight==='extended'\\).length; const d=q.filter\\(x=>x.weight==='deep'\\).length; console.log\\('core:',c,'extended:',e,'deep:',d,'total:',q.length\\); console.log\\('Quick:',c\\); console.log\\('Standard:',c+e\\); console.log\\('Deep:',q.length\\);\")",
+      "Bash(node -e ' *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\29960\\Desktop\\MBTI\\.worktrees\\mbti-dev"

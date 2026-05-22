@@ -42,8 +42,12 @@ export function prepareQuestions(version: TestVersion, seed?: number): Question[
   const regular = allQuestions.filter(
     (q) => allowedWeights.includes(q.weight) && !q.attentionCheck && !q.duplicateOf
   );
-  const attentionChecks = allQuestions.filter((q) => q.attentionCheck);
-  const duplicates = allQuestions.filter((q) => q.duplicateOf);
+  const attentionChecks = allQuestions.filter(
+    (q) => q.attentionCheck && allowedWeights.includes(q.weight)
+  );
+  const duplicates = allQuestions.filter(
+    (q) => q.duplicateOf && allowedWeights.includes(q.weight)
+  );
 
   const shuffled = shuffle(regular);
 

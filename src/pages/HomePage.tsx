@@ -48,11 +48,23 @@ const features = [
 
 export default function HomePage() {
   const navigate = useNavigate();
-  const startTest = useTestStore((s) => s.startTest);
+  const versionLabels: Record<string, string> = {
+    quick: '精简版', standard: '标准版', deep: '深度版',
+  };
+
+  const { startTest, questions, answers, version } = useTestStore();
+
+  const hasProgress = questions.length > 0 && Object.keys(answers).length > 0;
 
   const handleStart = (version: TestVersion) => {
     startTest(version);
     navigate('/test');
+  };
+
+  const handleResume = () => {
+    if (hasProgress) {
+      navigate('/test');
+    }
   };
 
   return (
@@ -82,6 +94,24 @@ export default function HomePage() {
           </div>
         ))}
       </div>
+
+      {hasProgress && (
+        <div className="resume-section animate-in">
+          <button className="resume-card" onClick={handleResume}>
+            <div className="resume-header">
+              <span className="resume-label">继续上次的测试</span>
+              <span className="resume-badge">{versionLabels[version]}</span>
+            </div>
+            <p className="resume-desc">已完成 {Object.keys(answers).length} / {questions.length} 题，点击继续作答</p>
+            <div className="resume-progress-track">
+              <div
+                className="resume-progress-fill"
+                style={{ width: `${questions.length > 0 ? Math.round((Object.keys(answers).length / questions.length) * 100) : 0}%` }}
+              />
+            </div>
+          </button>
+        </div>
+      )}
 
       <div className="version-section-label">选择测试版本</div>
       <div className="version-cards">

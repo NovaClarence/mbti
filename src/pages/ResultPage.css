@@ -5,6 +5,52 @@
   animation: fadeInUp 0.5s var(--ease) both;
 }
 
+/* ── Sticky TOC ── */
+.result-toc {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  padding: 10px 4px;
+  margin: 0 -24px 28px;
+  background: rgba(248, 247, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.result-toc::-webkit-scrollbar { display: none; }
+
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  transition: all 0.2s var(--ease);
+  flex-shrink: 0;
+}
+
+.toc-item:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(108, 92, 231, 0.05);
+}
+
+.toc-emoji { font-size: 14px; }
+
 .result-hero {
   text-align: center;
   padding: 40px 24px;
@@ -112,6 +158,18 @@
 .card-career { border-left: 4px solid #0984e3; }
 .card-academic { border-left: 4px solid #00b894; }
 
+.card-dominant {
+  border-left: 4px solid var(--color-primary);
+  background: linear-gradient(135deg, rgba(108,92,231,0.05), rgba(162,155,254,0.02));
+}
+.card-dominant p { font-size: 15px; line-height: 1.9; }
+
+.card-auxiliary {
+  border-left: 4px solid var(--color-primary-light);
+  background: linear-gradient(135deg, rgba(162,155,254,0.04), rgba(108,92,231,0.01));
+}
+.card-auxiliary p { font-size: 15px; line-height: 1.9; }
+
 .card-relationships {
   border-left: 4px solid #e17055;
   background: linear-gradient(135deg, rgba(225,112,85,0.04), rgba(253,203,110,0.03));
@@ -201,14 +259,25 @@
   box-shadow: 0 8px 28px rgba(108, 92, 231, 0.4);
 }
 
-.action-secondary {
+.action-share {
   background: var(--color-bg-card);
   color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.action-share:hover {
+  background: rgba(108, 92, 231, 0.05);
+}
+
+.action-secondary {
+  background: var(--color-bg-card);
+  color: var(--color-text-secondary);
   border: 2px solid var(--color-border);
 }
 
 .action-secondary:hover {
   border-color: var(--color-primary);
+  color: var(--color-primary);
   background: rgba(108, 92, 231, 0.03);
 }
 
