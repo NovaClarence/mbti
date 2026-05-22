@@ -1,5 +1,5 @@
 .result-page {
-  max-width: 600px;
+  max-width: 680px;
   width: 100%;
   padding: 48px 24px 80px;
   animation: fadeInUp 0.5s var(--ease) both;
@@ -10,7 +10,7 @@
   padding: 40px 24px;
   background: linear-gradient(135deg, rgba(108,92,231,0.06), rgba(162,155,254,0.04));
   border-radius: var(--radius-xl);
-  margin-bottom: 32px;
+  margin-bottom: 36px;
   border: 1px solid var(--color-border);
   position: relative;
   overflow: hidden;
@@ -31,21 +31,18 @@
 }
 
 .result-section {
-  margin-bottom: 32px;
-  animation: slideUp 0.5s var(--ease) 0.15s both;
+  margin-bottom: 36px;
+  animation: slideUp 0.5s var(--ease) both;
 }
 
-.result-section:nth-child(3) { animation-delay: 0.25s; }
-.result-section:nth-child(4) { animation-delay: 0.35s; }
-
 .result-section h3 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 18px;
   color: var(--color-text);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   letter-spacing: -0.2px;
 }
 
@@ -54,9 +51,74 @@
   flex: 1;
   height: 1px;
   background: var(--color-border);
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
+/* ── Overview ── */
+.report-overview {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text);
+  background: linear-gradient(135deg, rgba(108,92,231,0.04), rgba(162,155,254,0.02));
+  padding: 24px;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--color-primary);
+}
+
+/* ── Report Cards ── */
+.report-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.report-card {
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  transition: all 0.2s var(--ease);
+}
+
+.report-card:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.report-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+  letter-spacing: -0.2px;
+}
+
+.report-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.card-strength { border-left: 4px solid var(--color-success); }
+.card-weakness { border-left: 4px solid var(--color-accent); }
+
+.card-emotional {
+  border-left: 4px solid #a78bfa;
+  background: linear-gradient(135deg, rgba(108,92,231,0.03), rgba(162,155,254,0.02));
+}
+.card-emotional p { font-size: 15px; line-height: 1.9; }
+
+.card-career { border-left: 4px solid #0984e3; }
+.card-academic { border-left: 4px solid #00b894; }
+
+.card-relationships {
+  border-left: 4px solid #e17055;
+  background: linear-gradient(135deg, rgba(225,112,85,0.04), rgba(253,203,110,0.03));
+}
+.card-relationships p { font-size: 15px; line-height: 1.9; }
+
+/* ── Trait Tags ── */
 .trait-tags {
   display: flex;
   gap: 10px;
@@ -79,12 +141,40 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* ── Growth List ── */
+.growth-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.growth-item {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text);
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(108,92,231,0.04), rgba(162,155,254,0.02));
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  position: relative;
+  padding-left: 40px;
+}
+
+.growth-item::before {
+  content: '\2726';
+  position: absolute;
+  left: 16px;
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+/* ── Actions ── */
 .result-actions {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 40px;
-  animation: slideUp 0.5s var(--ease) 0.45s both;
+  margin-top: 44px;
 }
 
 .action-btn {
@@ -120,4 +210,14 @@
 .action-secondary:hover {
   border-color: var(--color-primary);
   background: rgba(108, 92, 231, 0.03);
+}
+
+@media (max-width: 480px) {
+  .result-page {
+    padding: 32px 16px 60px;
+  }
+  .report-overview {
+    font-size: 14px;
+    padding: 18px;
+  }
 }
