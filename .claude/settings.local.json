@@ -31,7 +31,11 @@
       "Bash(git branch *)",
       "Bash(npx tsx -e ' *)",
       "Bash(node -e \"const q=require\\('./src/data/questions.json'\\); const c=q.filter\\(x=>x.weight==='core'\\).length; const e=q.filter\\(x=>x.weight==='extended'\\).length; const d=q.filter\\(x=>x.weight==='deep'\\).length; console.log\\('core:',c,'extended:',e,'deep:',d,'total:',q.length\\); console.log\\('Quick:',c\\); console.log\\('Standard:',c+e\\); console.log\\('Deep:',q.length\\);\")",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(curl -s https://mbti-test-e4mea5pyd-novaqings-projects.vercel.app)",
+      "Bash(npx vercel *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\29960\\Desktop\\MBTI\\.worktrees\\mbti-dev"
